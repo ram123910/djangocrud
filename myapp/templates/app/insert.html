@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Page</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .form-container {
+      background-color: #fff;
+      max-width: 500px;
+      margin: 80px auto;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #006064;
+      margin-bottom: 25px;
+      font-weight: 700;
+      text-shadow: 1px 1px 2px #80deea;
+    }
+  table td input {
+    margin-left: 10px;  
+     margin-top: 10px; 
+    padding: 5px;       
+  }
+
+    .btn-insert {
+      width: 100%;
+      background-color: #00838f;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 6px;
+      padding: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-insert:hover {
+      background-color: #006064;
+    }
+  </style>    
+    
+</head>
+<body>
+    <center>
+        <h1>THIS IS A INSERT FORMS</h1>
+
+    <form action="{% url 'Insert' %}" method="post"  class="form-container">
+         {% csrf_token %}
+        <table>
+            <tr>
+                <td>Firstname</td>
+                <td><input type="text" name="fname"  placeholder="Enter your name" ></td>
+            </tr>
+              <tr>
+                <td>Lastname</td>
+                <td><input type="text" name="lname"  placeholder="enter your lastname"></td>
+            </tr>
+              <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" placeholder="enter your email"></td>
+            </tr>
+              <tr>
+                <td>Contact</td>
+                <td><input type="text" name="contact" placeholder="enter contact number"></td>
+            </tr>
+              <tr>
+        
+                <td><input type="submit" name="btn" value="insert" class="btn-insert"></td>
+            </tr>
+        </table>
+    </form>
+    </center>
+        <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
